@@ -1,0 +1,306 @@
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: hsl(248, 70%, 10%);
+  background-image: url("./assets/images/pattern-lines.svg"),
+    url("./assets/images/pattern-squiggly-line-bottom-desktop.svg"),
+    url("./assets/images/pattern-squiggly-line-top.svg"),
+    url("./assets/images/background-desktop.png");
+  background-size: cover, 700px, 500px, cover;
+  background-repeat: no-repeat;
+  background-position: center, bottom left, top right, center;
+}
+
+#imagelabel {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px dashed;
+  border-radius: 10px;
+  justify-content: center;
+  width: 90%;
+  padding: 10px;
+}
+
+#image {
+  display: none;
+}
+
+#imagelabel img {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: hsl(245, 19%, 35%);
+  margin-bottom: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.container > h1 {
+  font-size: 45px;
+}
+
+.container p {
+  font-size: 20px;
+  margin: 0 90px;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.container form input {
+  padding: 10px;
+  background-color: hsla(0, 0%, 100%, 0.15);
+  color: white;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+.container form label {
+  text-align: left;
+  width: 100%;
+  padding: 10px 0 5px;
+}
+
+.container form > button {
+  margin: 10px;
+  padding: 10px;
+  background-color: hsl(7, 71%, 60%);
+  color: black;
+  border-radius: 10px;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 3px;
+  background-color: hsl(245, 19%, 35%);
+  color: white;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.buttons {
+  display: none;
+}
+
+small {
+  display: none;
+  text-align: start;
+  padding: 10px;
+  color: hsl(7, 71%, 60%);
+  font-size: 12px;
+}
+
+small span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: 1px solid hsl(7, 71%, 60%);
+  margin-right: 4px;
+  padding: 1px 5px;
+}
+
+.ticket {
+  width: 100%;
+  max-width: 500px;
+  background: linear-gradient(135deg, hsl(248, 70%, 20%), hsl(248, 70%, 15%));
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  margin: 20px auto;
+}
+
+.ticket::before,
+.ticket::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: hsl(248, 70%, 15%);
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.ticket::before {
+  top: 20%;
+  left: -5px;
+}
+
+.ticket::after {
+  top: 80%;
+  right: -5px;
+}
+
+.ticket-header {
+  background-color: hsl(248, 70%, 10%);
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 2px dashed #ccc;
+}
+
+.ticket-header img {
+  width: 120px;
+}
+
+.ticket-body {
+  display: flex;
+  text-align: left;
+  padding: 0;
+}
+
+.ticket-left,
+.ticket-right {
+  flex: 1;
+  padding: 20px;
+}
+
+.ticket-left {
+  border-right: 2px dashed #ccc;
+}
+
+.ticket-event {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.ticket-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.ticket-venue,
+.ticket-date,
+.ticket-time,
+.ticket-id {
+  font-size: 14px;
+  color: #ccc;
+  margin: 3px 0;
+}
+
+.ticket-divider {
+  width: 1px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #ccc,
+    #ccc 4px,
+    transparent 4px,
+    transparent 8px
+  );
+}
+
+.ticket-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.ticket-github {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.ticket-github img {
+  width: 20px;
+  height: 20px;
+}
+
+.ticket-github p {
+  font-size: 14px;
+  color: #ddd;
+}
+
+.ticket-barcode {
+  width: 100px;
+  height: 30px;
+  background: repeating-linear-gradient(
+    90deg,
+    #fff,
+    #fff 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  margin-top: 15px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.attribution {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: hsl(248, 70%, 10%);
+  color: white;
+}

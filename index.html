@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Conference Ticket Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <img src="assets/images/logo-full.svg" alt="Conference Logo" />
+      <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <p>Secure your spot at next year's biggest coding conference.</p>
+
+      <form action="#" method="post">
+        <label for="image">Upload Avatar</label>
+        <label for="image" id="imagelabel">
+          <input type="file" id="image" accept="image/*" />
+          <img
+            src="assets/images/icon-upload.svg"
+            alt="Upload Icon"
+            id="backimage"
+          />
+          <span>Drag and drop or click to upload</span>
+          <div class="buttons">
+            <button class="btn" id="change" type="button">Change</button>
+            <button class="btn" id="remove" type="button">Remove</button>
+          </div>
+        </label>
+        <small id="small-image"
+          ><span>!</span>File too large. Please upload an image under
+          500KB.</small
+        >
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" />
+        <small id="small-name"><span>!</span>Please enter a name</small>
+
+        <label for="email">Email Address:</label>
+        <input type="text" id="email" placeholder="example@email.com" />
+        <small id="small-email"><span>!</span>Please enter a valid email</small>
+
+        <label for="gethub">GitHub Username:</label>
+        <input type="text" id="gethub" placeholder="@yourusername" />
+        <small id="small-gethub"><span>!</span>Please enter a username</small>
+
+        <button type="submit" id="submit">Generate My Ticket</button>
+      </form>
+    </div>
+
+    <div id="ticket-modal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <div id="ticket-container"></div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Klevis</a>.
+    </div>
+  </body>
+</html>
